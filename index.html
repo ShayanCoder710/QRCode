@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" , dir="rtl">
+
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>QRCode Creator</title>
+
+
+</head>
+
+
+<body>
+
+
+
+    <form action="submit" method="post" id="info"><br>
+
+        <label for="data">لینکی که میخواهید<br> به QRCode اختصاصش دهید را وارد کنید:</label> <br>
+        <input type="text" placeholder="لینک را وارد کنید" autocomplete="on" name="data" id="input"> <br><br>
+
+
+        <label>رنگ اصلی QRCode:</label> <br>
+        <input type="color" name="fg" value="#969696" class="ic">
+
+        <br><br>
+
+        <label>رنگ پس زمینه QRCode:</label> <br>
+        <input type="color" name="bg" value="#969696" class="ic">
+
+        <br><br>
+
+        <input type="submit" value="ساخت QRCode" class="btn" dir="ltr" lang="en">
+
+        <br><br>
+    </form>
+
+    <br>
+
+    <div id="image">
+        <br>
+        <h2>نتیجه:</h2>
+        <img src="{{ data.file }}" id="QRCode">
+
+        <div id="down-del">
+
+            <form action="download" method="post">
+
+                <input type="submit" value="نصب QRCode" class="btn">
+
+            </form>
+            
+            <form action="delete" method="post">
+
+                <input type="submit" value="حذف QRCode" class="btn"> <br><br>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <h6>
+            کلیه حقوق مادی و معنوی برای QRCode Creator  محفوظ است ©
+        </h6>
+    </footer>
+
+
+</body>
+</html>
